@@ -18,6 +18,7 @@ router.post('/register', async (req, res, next) => {
     const saved = await usersModel.add(user)
     res.status(201).json(saved)
   } catch (err) {
+    console.log(err)
     next(err)
   }
 })
