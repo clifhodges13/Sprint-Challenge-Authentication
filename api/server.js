@@ -13,7 +13,6 @@ server.use(cors());
 server.use(express.json());
 
 server.get('/', (req, res) => {
-  console.log(process.env.JWT_SECRET)
   res.send('Welcome!')
 })
 

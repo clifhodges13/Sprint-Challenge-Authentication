@@ -26,7 +26,7 @@ describe('auth-router', () => {
   })
 
   describe('POST /login endpoint', () => {
-    it('should return a status 200 OK', async () => {
+    it('should return a status 401 Unauthorized', async () => {
       const res = await supertest(server).post('/api/auth/login')
         .send(existingUser)
       expect(res.status).toBe(401)
